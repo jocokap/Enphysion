@@ -1,0 +1,45 @@
+.pricing-wrapper {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 20px;
+   align-items: flex-start;
+}
+
+.pricing-wrapper .pricing {
+   padding: 3rem 1.5rem 1.5rem 1.5rem;
+   background: #fff;
+   box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.2);
+   border-radius: 15px;
+   overflow: hidden;
+   position: relative;
+}
+
+.pricing-wrapper .pricing::before {
+   content: "";
+   height: 1.5rem;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   top: 0;
+   left: 0;
+   position: absolute;
+   width: 100%;
+}
+
+.pricing-wrapper .pricing:nth-child(1)::before {
+   background-image: url("../img/p-bar-1.png");
+}
+
+.pricing-wrapper .pricing:nth-child(2)::before {
+   background-image: url("../img/p-bar-2.png");
+}
+
+.pricing-wrapper .pricing:nth-child(3)::before {
+   background-image: url("../img/p-bar-3.png");
+}
+
+@media only screen and (max-width: 1000px) {
+     .pricing-wrapper {
+          grid-template-columns: 1fr;
+     }
+}

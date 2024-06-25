@@ -1,0 +1,28 @@
+.team-wrapper {
+   padding: 2rem 1.5rem;
+   box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.team-wrapper .team {
+   display: grid;
+   grid-template-columns: 350px 1fr;
+   align-items: center;
+   grid-gap: 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+   .team-wrapper {
+      padding: 0;
+      box-shadow: none;
+   }
+}
+
+@media only screen and (max-width: 700px) {
+.team-wrapper .team {
+     grid-template-columns: 1fr;
+}
+
+.team-wrapper .team > img {
+     max-width: 200px;
+}
+}
