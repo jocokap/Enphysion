@@ -12,6 +12,8 @@
 </head>
 
 <body>
+
+<!--
    <div id="popup" class="popup g-10">
       <span class="close-btn" onclick="closePopup()">×</span>
       <p>Get 20% off your initial evaluation!</p>
@@ -46,6 +48,36 @@
          </div>
       </form>
    </div>
+
+-->
+
+<div class="aomi-overlay" id="aomi-overlay"></div>
+
+<div class="aomi-popup" id="aomi-popup">
+    <button class="close-btn" id="closePopup">&times;</button>
+    <div class="popup-content">
+        <h2>Unlock 20% Off Your Initial EnPhysion Evaluation</h2>
+        <p>Download our Movewell Starter Kit and get 20% off your initial evaluation to put your health first.</p>
+        <button id="downloadGuide" style="color: #212121;font-weight: bold;"><a href="https://enphysion-health.ck.page/ee57913583">Download Guide</a></button>
+    </div>
+</div>
+
+<script>
+window.onload = function() {
+    setTimeout(function() {
+        document.getElementById('aomi-overlay').classList.add('show');
+        document.getElementById('aomi-popup').classList.add('show');
+    }, 3000);
+};
+
+function closePopup() {
+    document.getElementById('aomi-overlay').classList.remove('show');
+    document.getElementById('aomi-popup').classList.remove('show');
+}
+
+document.getElementById('closePopup').addEventListener('click', closePopup);
+</script>
+
    <div class="wave-top">
       <img src="img/wave-top.png" alt="wave" />
    </div>
