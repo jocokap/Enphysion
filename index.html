@@ -12,8 +12,7 @@
 </head>
 
 <body>
-
-<!--
+   <!--
    <div id="popup" class="popup g-10">
       <span class="close-btn" onclick="closePopup()">×</span>
       <p>Get 20% off your initial evaluation!</p>
@@ -50,15 +49,13 @@
    </div>
 
 -->
-
+   <!--
 <div class="aomi-overlay" id="aomi-overlay"></div>
 
 <div class="aomi-popup" id="aomi-popup">
     <button class="close-btn" id="closePopup">&times;</button>
     <div class="popup-content">
-        <h2>Unlock 20% Off Your Initial EnPhysion Evaluation</h2>
-        <p>Download our Movewell Starter Kit and get 20% off your initial evaluation to put your health first.</p>
-        <button id="downloadGuide" style="color: #212121;font-weight: bold;"><a href="https://enphysion-health.ck.page/ee57913583">Download Guide</a></button>
+      <script async data-uid="ee57913583" src="https://enphysion-health.ck.page/ee57913583/index.js"></script>
     </div>
 </div>
 
@@ -77,6 +74,51 @@ function closePopup() {
 
 document.getElementById('closePopup').addEventListener('click', closePopup);
 </script>
+-->
+
+   <div id="fullscreen-form" class="fullscreen-overlay">
+      <div class="form-container">
+         <button id="close-form" aria-label="Close"></button>
+         <script async data-uid="ee57913583" src="https://enphysion-health.ck.page/ee57913583/index.js"></script>
+      </div>
+   </div>
+
+   <script>
+      document.addEventListener('DOMContentLoaded', function () {
+         const formOverlay = document.getElementById('fullscreen-form');
+         const formContainer = formOverlay.querySelector('.form-container');
+         const closeButton = document.getElementById('close-form');
+
+         function openForm() {
+            formOverlay.style.display = 'flex';
+            setTimeout(() => {
+               formOverlay.classList.add('active');
+            }, 10);
+         }
+
+         function closeForm() {
+            formOverlay.classList.remove('active');
+            setTimeout(() => {
+               formOverlay.style.display = 'none';
+            }, 300);
+         }
+
+         setTimeout(openForm, 3000);
+
+         closeButton.addEventListener('click', closeForm);
+
+         formOverlay.addEventListener('click', function (event) {
+            if (event.target === formOverlay) {
+               closeForm();
+            }
+         });
+
+         // Prevent clicks inside the form from closing it
+         formContainer.addEventListener('click', function (event) {
+            event.stopPropagation();
+         });
+      });
+   </script>
 
    <div class="wave-top">
       <img src="img/wave-top.png" alt="wave" />
@@ -221,7 +263,8 @@ document.getElementById('closePopup').addEventListener('click', closePopup);
          <div class="container">
             <h2 class="how-title c-w">
                <img src="img/arrow-white.png" alt="arrow-white">
-               See How It Works</h2>
+               See How It Works
+            </h2>
 
             <div class="inner-sec-how c-w">
                <img src="img/steps.png" alt="steps" />
@@ -507,6 +550,7 @@ document.getElementById('closePopup').addEventListener('click', closePopup);
          </p>
       </footer>
    </div>
+
    <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
    <script src="js/glide.js"></script>
    <script src="js/nav.js"></script>
