@@ -185,7 +185,7 @@ document.getElementById('closePopup').addEventListener('click', closePopup);
                   <a href="pricing.html" class="c-g h-b">Pricing</a>
                   <a href="team.html" class="c-g h-b">Team</a>
                   <a href="faq.html" class="c-g h-b">FAQ's</a>
-                              <a href="https://enphysionhealthllc.virtuagym.com/" class="btn-m btn-blue">Log in</a>
+                  <a href="https://enphysionhealthllc.virtuagym.com/" class="btn-m btn-blue">Log in</a>
                </div>
                <div class="hamburger">
                   <div></div>
@@ -548,9 +548,7 @@ document.getElementById('closePopup').addEventListener('click', closePopup);
       <section id="video">
          <div class="container">
             <div class="video-wrapper">
-
-               <video id="main-video" muted="" preload="metadata" autoplay="" controls
-                  poster="./img/video_placeholder.png">
+               <video id="main-video" muted preload="metadata" controls poster="./img/video_placeholder.png">
                   <source src="./img/app_video.m4v" type="video/mp4">
                   Your browser does not support the video tag.
                </video>
@@ -584,7 +582,43 @@ document.getElementById('closePopup').addEventListener('click', closePopup);
          </p>
       </footer>
    </div>
+   <script>
+      document.addEventListener('DOMContentLoaded', function () {
+         const video = document.getElementById('main-video');
 
+         const player = new Plyr(video, {
+            muted: true,
+            resetOnEnd: true,
+            loadSprite: false
+         });
+
+         function resetVideo() {
+            if (video) {
+               video.pause();
+               video.currentTime = 0;
+               if (player) {
+                  player.stop();
+               }
+            }
+         }
+
+         resetVideo();
+
+         if (window.performance && window.performance.navigation) {
+            if (window.performance.navigation.type === window.performance.navigation.TYPE_BACK_FORWARD) {
+               resetVideo();
+            }
+         }
+
+         window.addEventListener('pageshow', function (e) {
+            if (e.persisted) {
+               resetVideo();
+            }
+         });
+      });
+
+      window.onunload = function () { };
+   </script>
    <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
    <script src="js/glide.js"></script>
    <script src="js/nav.js"></script>
