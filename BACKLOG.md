@@ -61,3 +61,45 @@ Pick one — body copy and the footer both favor `EnPhysion` — and normalize i
 the same pass.
 
 ---
+
+## 2. Kate needs a real headshot
+
+**Status:** open — blocked on Kate
+**Raised:** 2026-08-24, while adding Maggie and Susan
+**Effort:** 10 min once a photo exists
+
+`img/kate-osullivan.png` is not a headshot. It is a full-body vacation snapshot taken
+at Horseshoe Bend — seated on a canyon rim, wearing sunglasses, face roughly 40px
+across in a 400×400 file.
+
+It cannot be fixed by cropping. The source is only 400×400, so zooming to her face
+yields a blurry ~80px square. It needs a new photo from Kate.
+
+With four proper portraits now surrounding it, this reads as clearly wrong rather
+than merely inconsistent. Ask Kate for a headshot framed like the others — head and
+upper shoulders, plain background.
+
+---
+
+## 3. Headshot backgrounds are inconsistent
+
+**Status:** open
+**Raised:** 2026-08-24, while adding Maggie and Susan
+**Effort:** real project, needs a photographer or an editing pass
+
+All five headshots are now the same *shape*. They are not the same *style*:
+
+| Person | Background |
+|---|---|
+| Josh | mottled purple studio |
+| Kate | red canyon (see item 2) |
+| Maggie | beige wall |
+| Rebecca | neutral gray studio |
+| Susan | outdoor green bokeh |
+
+Squaring the images fixed alignment, which was the visible defect. Making the set
+genuinely uniform means either a group reshoot against one backdrop or a background
+replacement pass on all five. Worth doing if the team page gets a design refresh;
+not worth doing on its own.
+
+---
