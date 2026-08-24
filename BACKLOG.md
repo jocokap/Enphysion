@@ -35,6 +35,9 @@ convention to follow: **`Page Name | EnPhysion`**.
 ### Already correct — leave alone
 
 - `blog/5-Best-Tips-for-Virtual-Physical-Therapy-at-Home.html` — matches the convention exactly
+
+### Needs only the suffix
+
 - `blog/5-Best-Home-Exercise-Programs-for-Adults-Aged-50.html` — good title, missing the ` | EnPhysion` suffix; add it for consistency
 
 ### Templates
@@ -79,6 +82,10 @@ With four proper portraits now surrounding it, this reads as clearly wrong rathe
 than merely inconsistent. Ask Kate for a headshot framed like the others — head and
 upper shoulders, plain background.
 
+The file is also disproportionately large — 316K for a 400×400 image, versus 24–36K
+for the JPEG headshots. Re-encoding as JPEG when the photo is replaced will fix this
+too.
+
 ---
 
 ## 3. Headshot backgrounds are inconsistent
@@ -101,5 +108,30 @@ Squaring the images fixed alignment, which was the visible defect. Making the se
 genuinely uniform means either a group reshoot against one backdrop or a background
 replacement pass on all five. Worth doing if the team page gets a design refresh;
 not worth doing on its own.
+
+---
+
+## 4. Instagram footer icon has the wrong alt text
+
+**Status:** open
+**Raised:** 2026-08-24, during final review of the team profile additions
+**Effort:** ~15 min, one commit — one-word fix repeated across 13 files
+
+Every page's footer has two social icons, and the Instagram one is mislabeled:
+
+```html
+<img src="img/facebook.png" alt="facebook">
+<img src="img/instagram.png" alt="facebook">
+```
+
+A screen reader announces two consecutive links as "facebook", so the Instagram
+link has no distinguishing name and is effectively unreachable by name. The fix is
+changing the second `alt` to `"instagram"`, but it has to happen in all 13 HTML
+files that carry the footer.
+
+This predates the current branch — it goes back to the original migration commit
+`e3346d4` — so it was correctly left out of the team-profile work. It surfaced now
+because that work just cleaned up the team page's image alt text, which made the
+footer's identical-alt-text bug next door easy to spot.
 
 ---
