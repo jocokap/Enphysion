@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Claude Code — local-only settings
+.claude/settings.local.json
+
+# Logs / temp
+*.log
+tmp/
+
+# Superpowers scratch
+.superpowers/
