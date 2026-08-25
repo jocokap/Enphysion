@@ -23,3 +23,6 @@ tmp/
 
 # Superpowers scratch
 .superpowers/
+
+# Internal planning docs live outside the repo (see ../enphysion-website-notes)
+docs/superpowers/
