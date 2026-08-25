@@ -65,26 +65,23 @@ the same pass.
 
 ---
 
-## 2. Kate needs a real headshot
+## 2. Request an updated headshot for Kate
 
-**Status:** open — blocked on Kate
+**Status:** open — waiting on a new photo
 **Raised:** 2026-08-24, while adding Maggie and Susan
-**Effort:** 10 min once a photo exists
+**Effort:** 10 min once a photo is available
 
-`img/kate-osullivan.png` is not a headshot. It is a full-body vacation snapshot taken
-at Horseshoe Bend — seated on a canyon rim, wearing sunglasses, face roughly 40px
-across in a 400×400 file.
+`img/kate-osullivan.png` is a wider outdoor shot rather than a portrait, so her face
+sits much smaller in frame than in the other four cards.
 
-It cannot be fixed by cropping. The source is only 400×400, so zooming to her face
-yields a blurry ~80px square. It needs a new photo from Kate.
+Cropping in won't work: the file is only 400×400 to begin with, so zooming to her
+face gives roughly an 80px square. It needs a new source photo.
 
-With four proper portraits now surrounding it, this reads as clearly wrong rather
-than merely inconsistent. Ask Kate for a headshot framed like the others — head and
-upper shoulders, plain background.
+When convenient, ask Kate for a headshot framed like the others — head and upper
+shoulders, simple background.
 
-The file is also disproportionately large — 316K for a 400×400 image, versus 24–36K
-for the JPEG headshots. Re-encoding as JPEG when the photo is replaced will fix this
-too.
+The file is also larger than it needs to be at 316K for a 400×400 image, versus
+24–36K for the JPEG headshots. Saving the replacement as JPEG handles that too.
 
 ---
 
@@ -99,7 +96,7 @@ All five headshots are now the same *shape*. They are not the same *style*:
 | Person | Background |
 |---|---|
 | Josh | mottled purple studio |
-| Kate | red canyon (see item 2) |
+| Kate | outdoors, red rock (see item 2) |
 | Maggie | beige wall |
 | Rebecca | neutral gray studio |
 | Susan | outdoor green bokeh |
