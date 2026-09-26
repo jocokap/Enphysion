@@ -39,3 +39,8 @@
       grid-template-columns: 1fr;
    }
 }
+
+/* Gradient text clips letter descenders (g, p, y) at the tight h1 line-height */
+header h1 .c-gb {
+   padding-bottom: 0.25em;
+}
