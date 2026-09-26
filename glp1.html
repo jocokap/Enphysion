@@ -192,6 +192,17 @@
          </p>
       </footer>
    </div>
+   <script>
+      // Google Ads conversion: count clicks on the Calendly booking button(s)
+      document.querySelectorAll('a[href*="calendly.com"]').forEach(function (link) {
+         link.addEventListener('click', function () {
+            gtag('event', 'conversion', {
+               'send_to': 'AW-359837161/lycaCKPZ7oYdEOnbyqsB',
+               'transport_type': 'beacon'
+            });
+         });
+      });
+   </script>
    <script src="js/nav.js"></script>
 </body>
 
