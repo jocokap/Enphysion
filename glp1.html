@@ -7,6 +7,7 @@
    <link rel="stylesheet" href="css/reset.css" />
    <link rel="stylesheet" href="css/pricing.css" />
    <link rel="stylesheet" href="css/glp1.css" />
+   <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
    <title>GLP-1 Strength Program | EnPhysion</title>
    <meta name="description" content="A 16-week virtual strength program that helps patients on GLP-1 therapy preserve muscle while losing weight, with InBody scans before and after." />
    <!-- Facebook Pixel Code -->
@@ -122,8 +123,8 @@
                <div class="glp-steps">
                   <div class="glp-step g-20">
                      <p class="glp-step-label c-b">Step 1</p>
-                     <h3>InBody scan and evaluation</h3>
-                     <p class="c-g">A baseline InBody scan shows your muscle and fat mass, while an evaluation
+                     <h3>InBody scan and evaluation in Newton</h3>
+                     <p class="c-g">A baseline InBody scan at our Newton location shows your muscle and fat mass, while an evaluation
                         ensures a safe and effective program design. Your program is streamed to our app, along
                         with a supplemental food app for protein tracking.</p>
                   </div>
@@ -192,6 +193,25 @@
          </p>
       </footer>
    </div>
+   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+   <script>
+      // Open Calendly as a popup on this page (falls back to a new tab if Calendly's script fails to load)
+      document.querySelectorAll('a[href*="calendly.com"]').forEach(function (link) {
+         link.addEventListener('click', function (e) {
+            if (window.Calendly) {
+               e.preventDefault();
+               Calendly.initPopupWidget({ url: 'https://calendly.com/enphysion' });
+            }
+         });
+      });
+
+      // Google Ads conversion: count a completed Calendly booking
+      window.addEventListener('message', function (e) {
+         if (e.origin === 'https://calendly.com' && e.data && e.data.event === 'calendly.event_scheduled') {
+            gtag('event', 'conversion', { 'send_to': 'AW-359837161/lycaCKPZ7oYdEOnbyqsB' });
+         }
+      });
+   </script>
    <script src="js/nav.js"></script>
 </body>
 
