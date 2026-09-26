@@ -1,0 +1,41 @@
+.glp-eyebrow,
+.glp-step-label {
+   font-size: 14px;
+   font-weight: 600;
+   letter-spacing: 0.15em;
+   text-transform: uppercase;
+}
+
+.glp-cta {
+   justify-self: center;
+}
+
+.glp-steps {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 20px;
+   align-items: stretch;
+}
+
+.glp-steps .glp-step {
+   padding: 2rem 1.5rem;
+   background: #fff;
+   box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.2);
+   border-radius: 15px;
+   border-top: 6px solid #0016d2;
+   align-content: start;
+}
+
+.glp-note {
+   padding: 1.5rem;
+   background: #fff;
+   border-left: 4px solid #0016d2;
+   border-radius: 10px;
+   text-align: left;
+}
+
+@media only screen and (max-width: 1000px) {
+   .glp-steps {
+      grid-template-columns: 1fr;
+   }
+}
