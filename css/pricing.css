@@ -43,3 +43,52 @@
           grid-template-columns: 1fr;
      }
 }
+.pricing-program {
+   max-width: 1000px;
+   width: 100%;
+   margin: auto;
+   padding: 3rem 1.5rem 1.5rem 1.5rem;
+   background: #fff;
+   box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.2);
+   border-radius: 15px;
+   overflow: hidden;
+   position: relative;
+}
+
+.pricing-program::before {
+   content: "";
+   height: 1.5rem;
+   background-image: url("../img/p-bar-2.png");
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   top: 0;
+   left: 0;
+   position: absolute;
+   width: 100%;
+}
+
+.pricing-program-top {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 30px;
+   align-items: start;
+}
+
+.pricing-program-actions {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 20px;
+}
+
+@media only screen and (max-width: 750px) {
+   .pricing-program-top {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+   }
+
+   .pricing-program-actions {
+      flex-direction: column;
+   }
+}

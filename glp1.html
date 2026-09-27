@@ -155,6 +155,32 @@
          </div>
       </section>
 
+      <section id="pricing">
+         <div class="container">
+            <div class="glp-pricing mxw-700 m-a g-30">
+               <h2 class="t-c">Program Pricing</h2>
+               <p class="c-g t-c">Everything is included: your in-person evaluation and InBody scan in Newton, 16
+                  weeks of guided virtual training with live weekly sessions, the app and protein tracking tools,
+                  and your final re-scan and results.</p>
+               <div class="glp-price-options">
+                  <div class="glp-price t-c g-10">
+                     <p class="glp-price-amount c-b">$750</p>
+                     <p class="f-l">paid in full</p>
+                     <p class="glp-price-save">(save $46)</p>
+                  </div>
+                  <p class="glp-price-or c-g">or</p>
+                  <div class="glp-price t-c g-10">
+                     <p class="glp-price-amount c-b">$199<span class="c-g">/month</span></p>
+                     <p class="f-l">for 4 months</p>
+                  </div>
+               </div>
+               <p class="c-g t-c">No extra fees. Your $150 evaluation is included.</p>
+               <a class="glp-cta" href="https://calendly.com/enphysion/15min" target="_blank"><button
+                     class="btn-m btn-blue">Book a Free Consultation</button></a>
+            </div>
+         </div>
+      </section>
+
       <section class="bg-b" id="consult">
          <div class="container">
             <div class="inner-consult t-c g-30">
@@ -200,7 +226,7 @@
          link.addEventListener('click', function (e) {
             if (window.Calendly) {
                e.preventDefault();
-               Calendly.initPopupWidget({ url: 'https://calendly.com/enphysion' });
+               Calendly.initPopupWidget({ url: link.href.split('?')[0] });
             }
          });
       });
