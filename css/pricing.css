@@ -77,18 +77,14 @@
 
 .pricing-program-actions {
    display: flex;
-   flex-wrap: wrap;
+   flex-direction: column;
    align-items: center;
-   gap: 20px;
+   gap: 15px;
 }
 
 @media only screen and (max-width: 750px) {
    .pricing-program-top {
       grid-template-columns: 1fr;
       grid-gap: 20px;
-   }
-
-   .pricing-program-actions {
-      flex-direction: column;
    }
 }
