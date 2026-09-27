@@ -34,9 +34,64 @@
    text-align: left;
 }
 
+.glp-price-options {
+   display: grid;
+   grid-template-columns: 1fr auto 1fr;
+   grid-gap: 20px;
+   align-items: stretch;
+}
+
+.glp-price {
+   padding: 2rem 1.5rem;
+   background: #fff;
+   box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.2);
+   border-radius: 15px;
+   border-top: 6px solid #0016d2;
+   align-content: start;
+}
+
+.glp-price-amount {
+   font-size: 44px;
+   font-weight: 700;
+   line-height: 1.1;
+}
+
+.glp-price-amount span {
+   font-size: 18px;
+   font-weight: 400;
+}
+
+.glp-price-save {
+   color: #0016d2;
+   font-weight: 700;
+}
+
+.glp-price-or {
+   align-self: center;
+   font-size: 14px;
+   font-weight: 600;
+   letter-spacing: 0.15em;
+   text-transform: uppercase;
+}
+
 @media only screen and (max-width: 1000px) {
    .glp-steps {
       grid-template-columns: 1fr;
+   }
+}
+
+@media only screen and (max-width: 750px) {
+   .glp-price-options {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+   }
+
+   .glp-price-or {
+      text-align: center;
+   }
+
+   .glp-price-amount {
+      font-size: 36px;
    }
 }
 
