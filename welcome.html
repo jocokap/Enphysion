@@ -82,9 +82,12 @@
       <section>
          <div class="container">
             <div class="mxw-700 m-a">
-               <!-- ===== Calendly link for the evaluation goes in data-url below ===== -->
+               <!-- 75-minute evaluation booking -->
                <div class="calendly-inline-widget offer-calendly"
-                  data-url="https://calendly.com/enphysion?hide_gdpr_banner=1"></div>
+                  data-url="https://calendly.com/enphysion/evaluation?hide_gdpr_banner=1"></div>
+               <p class="c-g t-c offer-fine" style="margin-top: 20px;">Prefer to talk first?
+                  <a href="https://calendly.com/enphysion/15min" class="link offer-call">Book a 15-minute phone
+                     call</a>.</p>
             </div>
          </div>
       </section>
@@ -110,6 +113,17 @@
       </footer>
    </div>
    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+   <script>
+      // The 15-minute call opens as a popup (falls back to a new page if Calendly doesn't load)
+      document.querySelectorAll('a.offer-call').forEach(function (link) {
+         link.addEventListener('click', function (e) {
+            if (window.Calendly) {
+               e.preventDefault();
+               Calendly.initPopupWidget({ url: link.href });
+            }
+         });
+      });
+   </script>
 </body>
 
 </html>
