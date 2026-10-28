@@ -1,0 +1,91 @@
+/* Ad landing page (eval-offer.html) and post-payment page (welcome.html).
+   Builds on pricing.css + glp1.css so the look matches the GLP-1 page. */
+
+.offer-hero {
+   display: grid;
+   grid-template-columns: 1.1fr 0.9fr;
+   grid-gap: 40px;
+   align-items: center;
+}
+
+.offer-hero-text {
+   text-align: left;
+}
+
+.offer-hero-text .glp-cta {
+   justify-self: start;
+}
+
+.offer-media {
+   width: 100%;
+   max-width: 420px;
+   justify-self: center;
+   border-radius: 50%;
+}
+
+/* When a real ad video is added, give it this class instead of the round photo */
+.offer-video {
+   width: 100%;
+   max-width: 420px;
+   justify-self: center;
+   border-radius: 15px;
+   box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.offer-price-line {
+   font-size: 20px;
+}
+
+.offer-price-line s {
+   color: #888;
+}
+
+.offer-price-line strong {
+   color: #0016d2;
+   font-size: 28px;
+}
+
+.offer-highlight {
+   color: #0016d2;
+   font-weight: 700;
+}
+
+.offer-price-card {
+   max-width: 420px;
+   margin: 0 auto;
+}
+
+.offer-fine {
+   font-size: 14px;
+}
+
+.offer-logo-nav {
+   padding: 20px 0;
+}
+
+.offer-calendly {
+   min-width: 320px;
+   height: 760px;
+   background: #fff;
+   border-radius: 15px;
+   box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.12);
+   overflow: hidden;
+}
+
+@media only screen and (max-width: 1000px) {
+   .offer-hero {
+      grid-template-columns: 1fr;
+   }
+
+   .offer-hero-text,
+   .offer-hero-text .glp-cta {
+      text-align: center;
+      justify-self: center;
+   }
+
+   .offer-media,
+   .offer-video {
+      max-width: 300px;
+      order: -1;
+   }
+}
